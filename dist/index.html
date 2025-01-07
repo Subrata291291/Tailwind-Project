@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind 24-12-2024</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <!--font aswome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--font aswome -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Header area-->
+    <section class="bg-transparent absolute top-0 z-10 w-[100%] py-4">
+        <div class="container mx-auto">
+            <!-- Dektop menu-->
+            <nav class="md:flex justify-between items-center hidden">
+                <div class="logo-area">
+                    <img src="../src/images/logo-blue.png" alt="" class="max-w-28">
+                </div>
+                <div class="menu-area">
+                    <ul class="flex font-josepin items-center">
+                        <li class="sm:pr-3 lg:pr-7">
+                            <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">Home</a>
+                        </li>
+                        <li class="sm:pr-3 lg:pr-7">
+                            <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">Couple</a>
+                        </li>
+                        <li class="sm:pr-3 lg:pr-7">
+                            <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">Story</a>
+                        </li>
+                        <li class="sm:pr-3 lg:pr-7">
+                            <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">Events</a>
+                        </li>
+                        <li class="sm:pr-3 lg:pr-7">
+                            <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">People</a>
+                        </li>
+                        <li class="sm:pr-3 lg:pr-7">
+                          <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">Gallery</a>
+                      </li>
+                        <li class="sm:pr-3 lg:pr-7">
+                            <a href="#" class="uppercase font-dosis sm:text-[0.8rem] lg:text-[1.1rem] text-[#fff] font-semibold hover:text-[#5e9a8e] drop-shadow-xl">Contact Us</a>
+                        </li>
+                        <li>
+                            <button class="px-6 py-3 font-dosis uppercase sm:text-[0.9rem] lg:text-[1.1rem] text-black font-semibold overflow-hidden relative bg-btn-prop bg-btn-size bg-bg-position hover:bg-btn-hover-prop border-0 bg-no-repeat rounded-none whitespace-nowrap border-[#5e9a8e]" style="transition: background 0.2s ease-in-out;">Book Appointment</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Dektop menu-->
+            <!-- Mobile menu-->
+            <div class="flex justify-between items-center md:hidden relative">
+                <div class="logo-area">
+                    <img src="../src/images/logo-blue.png" alt="" class="max-w-28">
+                </div>
+                <!-- Mobile menu button-->
+                <button type="button" class="inline-flex items-center justify-center text-white absolute right-0" onclick="toggleMenu()" id="open-menu" aria-controls="mobile-menu" aria-expanded="false">
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                 <!-- Mobile menu, show/hide based on menu state. -->
+                 <div class="hidden px-8 transition duration-300 " id="mobile-menu">
+                      <div class="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-[#5e9a8e] px-6 py-6 sm:max-w-sm sm:ring-1">
+                          <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5">
+                              <span class="sr-only">Your Company</span>
+                              <img class="h-8 w-auto" src="../src/images/logo_black.png.crdownload" alt="">
+                            </a>
+                            <button type="button" id="cross-icon" class="-m-2.5 rounded-md p-2.5 text-white">
+                              <span class="sr-only">Close menu</span>
+                              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="mt-6">
+                            <div class="-my-6 divide-y divide-gray-500/10">
+                              <div class="space-y-2 py-6">
+                                <div class="-mx-3">
+                                  <button type="button" id="dropdown-menu" class="flex w-full items-center justify-between py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e] shadow" aria-controls="disclosure-1" aria-expanded="false">
+                                    Product
+                                    <!--
+                                      Expand/collapse icon, toggle classes based on menu open state.
+                    
+                                      Open: "rotate-180", Closed: ""
+                                    -->
+                                    <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </button>
+                                  <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                                  <div class="mt-2 space-y-2 hidden bg-[#00000029]" id="disclosure">
+                                    <a href="#" class="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Analytics</a>
+                                    <a href="#" class="block  py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Engagement</a>
+                                    <a href="#" class="block  py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Security</a>
+                                    <a href="#" class="block  py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Integrations</a>
+                                    <a href="#" class="block  py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Automations</a>
+                                    <a href="#" class="block  py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Watch demo</a>
+                                    <a href="#" class="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e]">Contact sales</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e] shadow">Features</a>
+                                <a href="#" class="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e] shadow">Marketplace</a>
+                                <a href="#" class="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e] shadow">Company</a>
+                                <a href="#" class="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#5e9a8e] shadow">Login</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <!-- Mobile menu, show/hide based on menu state. -->
+              </div>
+            <!-- Mobile menu-->
+        </div>
+    </section>
+    <!--Header Area-->
+
+    <!--Banner Area-->
+    <section class="relative overflow-hidden bg-[url('../src/images/slide-1.jpg')] bg-cover bg-center py-[5rem] sm:py-[6rem] lg:py-[15rem] sm:pt-[10rem] lg:pt-[17rem] px-[0rem] pt-[10rem] before:bg-[#00000080] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content">
+      <div class="container flex items-center justify-center mx-auto">
+        <div class="block relative mb-[5rem] sm:mb-[8rem] lg:mb-[0rem]">
+          <h1 class="text-[2.5rem] sm:text-[4rem] lg:text-[6rem] font-great text-white font-medium	text-center" style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);">Suntina & Famico</h1>
+          <h3 class="text-center text-white text-[1rem] sm:text-[1.3rem] uppercase tracking-[0.2rem] lg:tracking-[0.6rem] border-t-2 border-b-2 py-2 mt-3">we're getting married</h3>
+        </div>
+        <div class="absolute bottom-[-5rem] sm:bottom-[-8rem] bg-[#5e9a8eb3] p-9 rounded-[50%] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] flex items-center justify-center before:content before:absolute before:bg-[#5e9a8e4d] before:w-[110%] before:h-[110%] before:left-[-5%] before:top[-5%] before:rounded-[50%] before:animate-pulse">
+          <div class="absolute top-[15%] sm:top-[20%] text-center">
+            <h5 class="text-[2rem] sm:text-[2.5rem] text-white font-great" style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);">Save the date</h5>
+            <h6 class="text-white font-roboto text-[1rem] sm:text-[1.2rem]" style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);">25 DEC 2023</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Banner Area-->
+
+    <!--About Area-->
+    <section class="my-10 lg:my-20">
+      <div class="container mx-auto">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div>
+            <img src="../src/images/img-1 (4).jpg" alt="" class="w-[100%]">
+          </div>
+          <div class="p-10 lg:p-20 bg-[#EFF5F3]">
+            <h3 class="text-[2rem] text-black font-dosis uppercase font-medium mb-4">The groom</h3>
+            <p class="text-[1.2rem] font-dosis text-[#767878] mb-6">
+              Hi I am suntina , dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            </p>
+            <p class="font-great text-3xl">- Suntina</p>
+            <ul class="flex mt-5">
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]">
+                  <i class="fa-brands fa-google-plus-g"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-10 lg:p-20 bg-[#EFF5F3] text-right order-last lg:order-none">
+            <h3 class="text-[2rem] text-black font-dosis uppercase font-medium mb-4">The Bride</h3>
+            <p class="text-[1.2rem] font-dosis text-[#767878] mb-6">
+              Hi I am suntina , dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            </p>
+            <p class="font-great text-3xl">- Famico</p>
+            <ul class="flex justify-end mt-5">
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+              <li class="pr-2">
+                <a href="#" class="flex items-center justify-center rounded-[50%] bg-[#7cafa5] p-2 text-white hover:bg-[#5e9a8e]">
+                  <i class="fa-brands fa-google-plus-g"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src="../src/images/img-1.jpg" alt="" class="w-[100%] lg:h-[480px]">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Area-->
+
+    <!--Countdown Area-->
+    <section class="my-10 lg:my-20">
+      <div class="relative bg-[url('../src/images/countdown-bg.jpg')] bg-cover bg-top  before:bg-[#00000080] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content">
+        <div class="container mx-auto">
+          <div class="py-20 sm:py-20 lg:py-40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center relative">
+              <div class="block text-white">
+                <p class="font-great text-[2rem] sm:text-[2rem] lg:text-4xl">We are waiting for.....</p>
+                <h2 class="font-great text-[4rem] sm:text-[4rem] lg:text-[5rem] mt-4">The adventure</h2>
+              </div>
+              <div>
+                <ul class="flex justify-between">
+                  <li class="text-center bg-[#EFEEED] border-4 border-[#D2D2D1] p-4 w-[100%] ml-2">
+                    <h3 class="font-dosis text-[2rem] text-[#5e9a8e] font-bold" id="day">0</h3>
+                    <p class="text-sm font-dosis text-[#5e9a8e] uppercase">Days</p>
+                  </li>
+                  <li class="text-center bg-[#EFEEED] border-4 border-[#D2D2D1] p-4 w-[100%] ml-2">
+                    <h3 class="font-dosis text-[2rem] text-[#5e9a8e] font-bold" id="hour">0</h3>
+                    <p class="text-sm font-dosis text-[#5e9a8e] uppercase">Hours</p>
+                  </li>
+                  <li class="text-center bg-[#EFEEED] border-4 border-[#D2D2D1] p-4 w-[100%] ml-2">
+                    <h3 class="font-dosis text-[2rem] text-[#5e9a8e] font-bold" id="minute">0</h3>
+                    <p class="text-sm font-dosis text-[#5e9a8e] uppercase">minutes</p>
+                  </li>
+                  <li class="text-center bg-[#EFEEED] border-4 border-[#D2D2D1] p-4 w-[100%] ml-2">
+                    <h3 class="font-dosis text-[2rem] text-[#5e9a8e] font-bold" id="second">0</h3>
+                    <p class="text-sm font-dosis text-[#5e9a8e] uppercase">sec</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+    <!--Countdown Area-->
+
+    <!--Love Story Area-->
+    <section class="my-10 lg:my-20">
+      <div class="relative">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 gap-4">
+            <div class="relative text-center mb-14">
+              <div class="absolute left-[50%] top-0 -translate-x-2/4 w-[18px] h-[42px] before:content before:absolute before:left-[50%] before:-translate-x-2/4 before:bg-[#5e9a8e33] before:w-[45px] before:h-[3px] before:top-[30px] ">
+                <span class="flex items-center justify-center text-[#9EC2BB] text-[2rem] before:w-[2px] before:h-[42px] before:top-[30px] before:bg-[#9EC2BB] before:absolute before:left-[50%] before:-translate-x-2/4 before:content">
+                  <i class="fa-solid fa-crow"></i><i class="fa-solid fa-crow ml-2" style="transform: scaleX(-1);"></i>
+                </span>
+              </div>
+              <h3 class="font-great text-[1.2rem] md:text-[3rem] tracking-[0.6rem] capitalize font-medium border-2 border-[#5e9a8e1a] mt-16 py-2 px-6 text-[#848383] bg-[#EFF5F3] inline-block overflow-hidden relative">Our love story</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative md:before:content md:before:bg-[#5e9a8e1a] md:before:absolute md:before:left-[50%] md:before:-translate-x-2/4 md:before:w-[2px] md:before:h-[100%] md:before:top-0">
+        <div class="container mx-auto">
+          <div class="grid md:grid-cols-2 gap-4 border-b-2 md:border-none pb-8 md:pb-0">
+            <div class="pl-0 lg:pl-[100px] pr-0 md:pr-[45px] order-1 md:order-none">
+              <div class="text-right">
+                <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">First meet</h3>
+                <span class="text-sm font-dosis font-semibold">Jan 12 2023</span>
+                <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, 
+                </p>
+              </div>
+            </div>
+            <div class="md:pl-[45px] pr-0 lg:pr-[100px]">
+              <img src="../src/images/img-1 (3).jpg" alt="">
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4 mt-10 md:mt-20 border-b-2 md:border-none pb-8 md:pb-0">
+            <div class="pl-0 lg:pl-[100px] pr-0 md:pr-[45px]">
+              <img src="../src/images/img-3 (3).jpg" alt="">
+            </div>
+            <div class="pl-0 md:pl-[45px] pr-0 lg:pr-[100px] relative">
+              <span class="hidden absolute left-[-28px] top-[-50px] w-[43px] h-[43px] bg-[#9cc2bb] text-center rounded-[50%] z-10 md:flex items-center justify-center text-white">
+                <i class="fa-regular fa-heart"></i>
+              </span>
+              <div class="text-left">
+                <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">First date</h3>
+                <span class="text-sm font-dosis font-semibold">Feb 14 2023</span>
+                <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4 mt-10 md:mt-20 border-b-2 md:border-none pb-8 md:pb-0">
+            <div class="pl-0 lg:pl-[100px] pr-0 md:pr-[45px] relative order-1 md:order-none">
+              <span class="hidden absolute right-[-28px] top-[-50px] w-[43px] h-[43px] bg-[#9cc2bb] text-center rounded-[50%] z-10 md:flex items-center justify-center text-white">
+                <i class="fa-regular fa-heart"></i>
+              </span>
+              <div class="text-right">
+                <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">Proposal</h3>
+                <span class="text-sm font-dosis font-semibold">Apr 14 2023</span>
+                <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
+                </p>
+              </div>
+            </div>
+            <div class="pl-0 md:pl-[45px] pr-0 lg:pr-[100px]">
+              <img src="../src/images/img-5 (3).jpg" alt="">
+            </div> 
+          </div>
+          <div class="grid md:grid-cols-2 gap-4 mt-10 md:mt-20">
+            <div class="pl-0 lg:pl-[100px] md:pr-[45px]">
+              <img src="../src/images/img-8 (1).jpg" alt="">
+            </div>
+            <div class="md:pl-[45px] pr-0 lg:pr-[100px] relative">
+              <span class="hidden absolute left-[-28px] top-[-50px] w-[43px] h-[43px] bg-[#9cc2bb] text-center rounded-[50%] z-10 md:flex items-center justify-center text-white">
+                <i class="fa-regular fa-heart"></i>
+              </span>
+              <div class="text-left">
+                <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">Enagagement</h3>
+                <span class="text-sm font-dosis font-semibold">Jul 14 2023</span>
+                <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Love Story Area-->
+
+    <!--Custom JS-->
+    <script src="../src/js/custom.js"></script>
+    <!--Custom JS-->
+      
+</body>
+</html> 
