@@ -91,3 +91,28 @@ function CountDown(lastDate) {
     }
   }
   CountDown("2025-01-31T24:00:00.000000+05:30");
+
+  // JavaScript to handle accordion behavior
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const targetId = header.getAttribute('data-tab');
+      const content = document.getElementById(targetId);
+
+      // Close all other accordion contents and reset header background
+      document.querySelectorAll('.accordion-content').forEach(item => {
+        if (item !== content) {
+          item.classList.remove('active');
+        }
+      });
+
+      document.querySelectorAll('.accordion-header').forEach(item => {
+        if (item !== header) {
+          item.classList.remove('active');
+        }
+      });
+
+      // Toggle the clicked accordion content and header background
+      content.classList.toggle('active');
+      header.classList.toggle('active');
+    });
+  });
