@@ -882,6 +882,10 @@ select {
   z-index: 50;
 }
 
+.z-\[99\] {
+  z-index: 99;
+}
+
 .order-1 {
   order: 1;
 }
