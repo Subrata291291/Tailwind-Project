@@ -11,6 +11,15 @@
 .accordion-header.active {
     @apply bg-[#5E9A8E] text-[#fff];
 }
+.scrolled {
+  @apply bg-white text-black fixed top-0 shadow-md transition-all ease-in-out;
+}
+.scrolled .menu-area a {
+  color: black;
+}
+.scrolled #open-menu {
+  color: #000;
+}
 @keyframes pointerMoving {
     0% {
       -webkit-transform: translateY(5px);

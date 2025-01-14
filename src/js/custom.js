@@ -166,3 +166,15 @@ function CountDown(lastDate) {
 
   //Invoke theme check on initial load
   themeCheck();
+
+
+// Header Class add
+  window.addEventListener('scroll', () => {
+    const targetDiv = document.getElementById('header');
+    if (window.scrollY >= 150) {
+      targetDiv.classList.add('scrolled');
+    } else {
+      targetDiv.classList.remove('scrolled');
+    }
+  });
+  

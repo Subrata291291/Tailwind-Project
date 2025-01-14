@@ -870,10 +870,6 @@ select {
   top: 15%;
 }
 
-.top-\[50\%\] {
-  top: 50%;
-}
-
 .top-\[20\%\] {
   top: 20%;
 }
@@ -1747,6 +1743,29 @@ select {
   background-color: rgb(94 154 142 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.scrolled {
+  position: fixed;
+  top: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scrolled .menu-area a {
+  color: black;
+}
+
+.scrolled #open-menu {
+  color: #000;
 }
 
 @keyframes pointerMoving {
