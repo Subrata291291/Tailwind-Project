@@ -16,9 +16,15 @@
     <!--font aswome -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-white dark:bg-black">
+  <div class="fixed top-5 right-5 z-50">
+    <!-- <img src="../src/images/img-1 (1).jpg" alt="" class="sun cursor-pointer max-w-[2rem]"> -->
+    <i class="fa-regular fa-sun sun cursor-pointer text-[3rem] text-[#5F8D82]"></i>
+    <!-- <img src="../src/images/img-1 (2).jpg" alt="" class="moon cursor-pointer max-w-[2rem]"> -->
+    <i class="fa-solid fa-moon moon cursor-pointer text-[3rem] text-[#5F8D82]"></i>
+  </div>
     <!--Header area-->
-    <section class="bg-transparent absolute top-0 z-10 w-[100%] py-4" id="header">
+    <section class="bg-transparen absolute top-0 z-10 w-[100%] py-4" id="header">
         <div class="container mx-auto">
             <!-- Dektop menu-->
             <nav class="md:flex justify-between items-center hidden">
@@ -273,7 +279,7 @@
             <div class="pl-0 lg:pl-[100px] pr-0 md:pr-[45px] order-1 md:order-none">
               <div class="text-right">
                 <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">First meet</h3>
-                <span class="text-sm font-dosis font-semibold">Jan 12 2023</span>
+                <span class="text-sm font-dosis font-semibold dark:text-white">Jan 12 2023</span>
                 <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
                   A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, 
                 </p>
@@ -293,7 +299,7 @@
               </span>
               <div class="text-left">
                 <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">First date</h3>
-                <span class="text-sm font-dosis font-semibold">Feb 14 2023</span>
+                <span class="text-sm font-dosis font-semibold dark:text-white">Feb 14 2023</span>
                 <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
                   A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
                 </p>
@@ -307,7 +313,7 @@
               </span>
               <div class="text-right">
                 <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">Proposal</h3>
-                <span class="text-sm font-dosis font-semibold">Apr 14 2023</span>
+                <span class="text-sm font-dosis font-semibold dark:text-white">Apr 14 2023</span>
                 <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
                   A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
                 </p>
@@ -327,7 +333,7 @@
               </span>
               <div class="text-left">
                 <h3 class="text-[1.6rem] mb-1 text-[#5e9a8e] uppercase font-semibold">Enagagement</h3>
-                <span class="text-sm font-dosis font-semibold">Jul 14 2023</span>
+                <span class="text-sm font-dosis font-semibold dark:text-white">Jul 14 2023</span>
                 <p class="mt-4 font-dosis text-[#767878] text-[1.2rem] leading-9">
                   A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
                 </p>
@@ -503,10 +509,10 @@
                 <input type="text" name="name" class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none font-dosis text-black" placeholder="Your Name*">
               </div>
               <div>
-                <input type="email" name="email" class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black" placeholder="Your Email*">
+                <input type="email" name="email" class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black font-dosis" placeholder="Your Email*">
               </div>
               <div>
-                <select class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black" name="guest">
+                <select class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black font-dosis" name="guest">
                   <option disabled="" selected="">Number Of Guest*</option>
                   <option>1</option>
                   <option>2</option>
@@ -515,7 +521,7 @@
                 </select>
               </div>
               <div>
-                <select class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black" name="events">
+                <select class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black font-dosis" name="events">
                   <option disabled="" selected="">I Am Attending*</option>
                   <option>Al events</option>
                   <option>Wedding ceremony</option>
@@ -524,7 +530,7 @@
               </div>
             </div>
             <div class="grid grid-cols-1 gap-6 mt-[1.5rem]">
-              <textarea class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black h-[8rem] lg:h-[10rem]" name="notes" placeholder="Your Message*"></textarea>
+              <textarea class="font-dosis border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none text-black h-[8rem] lg:h-[10rem]" name="notes" placeholder="Your Message*"></textarea>
               <button class="px-6 py-3 font-dosis uppercase sm:text-[0.9rem] lg:text-[1.1rem] text-black font-semibold overflow-hidden relative bg-btn-prop bg-btn-size bg-bg-position hover:bg-btn-hover-prop border-0 bg-no-repeat rounded-none whitespace-nowrap border-[#5e9a8e] max-w-[300px] mx-auto" style="transition: background 0.2s ease-in-out;">Book Appointment</button>
             </div>
           </form>
@@ -544,6 +550,8 @@
         </div>
       </div>
     </section>
+    
+    
 
     <!--Custom JS-->
     <script src="../src/js/custom.js"></script>

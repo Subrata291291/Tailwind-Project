@@ -5,6 +5,9 @@
 .accordion-content.active {
     @apply block;
 }
+.display-none {
+  @apply hidden;
+}
 .accordion-header.active {
     @apply bg-[#5E9A8E] text-[#fff];
 }
