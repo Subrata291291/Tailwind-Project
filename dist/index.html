@@ -494,7 +494,7 @@
     <!--Tab Area-->
 
     <!--Form Area-->
-    <section class="relative overflow-hidden my-5 lg:my-20 bg-[url('../src/images/rsvp-bg.jpg')] bg-cover bg-top py-[3rem] sm:py-[5rem] lg:py-[5rem] px-[0rem] before:bg-[#000000ad] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content" id="party">
+    <section class="relative overflow-hidden my-5 lg:my-20 bg-[url('../src/images/rsvp-bg.jpg')] bg-cover bg-top py-[3rem] sm:py-[5rem] lg:py-[5rem] px-[0rem] before:bg-[#000000ad] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content" id=" form">
       <div class="container mx-auto">
         <div class="relative text-center mb-14">
           <div class="absolute left-[50%] top-0 -translate-x-2/4 w-[18px] h-[42px] before:content before:absolute before:left-[50%] before:-translate-x-2/4 before:bg-[#5e9a8e] before:w-[45px] before:h-[3px] before:top-[30px] ">
@@ -508,6 +508,7 @@
           <p class="text-white font-dosis text-[1.2rem]">Please reserve before December 16th, 2017.</p>
           <form action="https://api.web3forms.com/submit" method="post" class="mt-8">
             <input type="hidden" name="access_key" value="c600ce7c-5dac-437a-8191-780efbdd6c13">
+            <input type="hidden" name="subject" value="New Submission from Tailwind" />
             <div class="grid grid-cols-2 gap-6">
               <div>
                 <input type="text" name="name" class="border-none bg-[#E6ECEB] py-[0.7rem] px-[1rem] rounded-md w-[100%] outline-none font-dosis text-black" placeholder="Your Name*">
@@ -559,6 +560,53 @@
     <!--Custom JS-->
     <script src="../src/js/custom.js"></script>
     <!--Custom JS-->
+    <script>
+      const form = document.getElementById('form');
+      const result = document.getElementById('result');
+      
+      form.addEventListener('submit', function(e) {
+          const formData = new FormData(form);
+          e.preventDefault();
+      
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+      
+          result.innerHTML = "Please wait..."
+      
+          fetch('https://api.web3forms.com/submit', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                  },
+                  body: json
+              })
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                  result.innerHTML = json.message;
+                  result.classList.remove("text-gray-500");
+                  result.classList.add("text-green-500");
+                } else {
+                  console.log(response);
+                  result.innerHTML = json.message;
+                  result.classList.remove("text-gray-500");
+                  result.classList.add("text-red-500");
+                }
+              })
+              .catch((error) => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+              })
+              .then(function() {
+                  form.reset();
+                  setTimeout(() => {
+                      result.style.display = "none";
+                  }, 3000);
+              });
+      });
+      </script>
+      
       
 </body>
 </html> 
